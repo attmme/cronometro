@@ -50,6 +50,6 @@
  }
 }
 
-let crono = new Chronometer;
+// let crono = new Chronometer;
 //crono.startClick();
 

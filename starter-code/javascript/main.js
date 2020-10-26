@@ -1,16 +1,16 @@
 let chronometer = new Chronometer();
-let btnLeft     = document.getElementById('btnLeft');
-let btnRight    = document.getElementById('btnRight');
-let minDec      = document.getElementById('minDec');
-let minUni      = document.getElementById('minUni');
-let secDec      = document.getElementById('secDec');
-let secUni      = document.getElementById('secUni');
-let milDec      = document.getElementById('milDec');
-let milUni      = document.getElementById('milUni');
+let btnLeft = document.getElementById('btnLeft');
+let btnRight = document.getElementById('btnRight');
+let minDec = document.getElementById('minDec');
+let minUni = document.getElementById('minUni');
+let secDec = document.getElementById('secDec');
+let secUni = document.getElementById('secUni');
+let milDec = document.getElementById('milDec');
+let milUni = document.getElementById('milUni');
 
 
-function printTime(minutes,seconds) {
-    if(minutes>0){
+function printTime(minutes, seconds) {
+    if (minutes > 0) {
         this.printMinutes(minutes);
     }
     this.printSeconds(seconds);
@@ -68,7 +68,7 @@ function setResetBtn() {
 // Start/Stop Button
 btnLeft.addEventListener('click', function (e) {
 
-    if(btnLeft.className.indexOf('start')>0){
+    if (btnLeft.className.indexOf('start') > 0) {
         chronometer.startClick();
         setStopBtn();
         setSplitBtn();
@@ -78,23 +78,32 @@ btnLeft.addEventListener('click', function (e) {
         setResetBtn();
     }
 
-/*    e.currentTarget.classList.toggle('start');
-   e.currentTarget.classList.toggle('stop');
-   e.currentTarget.innerHTML ==='START'?
-   e.currentTarget.innerHTML = 'STOP':
-   e.currentTarget.innerHTML = 'START';
-   e.currentTarget.nextElementSibling.classList.toggle('reset');
-   e.currentTarget.nextElementSibling.classList.toggle('split');
-   e.currentTarget.nextElementSibling.innerHTML ==='RESET'?
-   e.currentTarget.nextElementSibling.innerHTML = 'SPLIT':
-   e.currentTarget.nextElementSibling.innerHTML = 'RESET'; */
-   
+    /*    e.currentTarget.classList.toggle('start');
+       e.currentTarget.classList.toggle('stop');
+       e.currentTarget.innerHTML ==='START'?
+       e.currentTarget.innerHTML = 'STOP':
+       e.currentTarget.innerHTML = 'START';
+       e.currentTarget.nextElementSibling.classList.toggle('reset');
+       e.currentTarget.nextElementSibling.classList.toggle('split');
+       e.currentTarget.nextElementSibling.innerHTML ==='RESET'?
+       e.currentTarget.nextElementSibling.innerHTML = 'SPLIT':
+       e.currentTarget.nextElementSibling.innerHTML = 'RESET'; */
+
 });
 
 // Reset/Split Button
 btnRight.addEventListener('click', function () {
 
+    if (btnRight.innerText == 'RESET') {
+        minDec.innerText = 0;
+        minUni.innerText = 0;
+        secDec.innerText = 0;
+        secUni.innerText = 0;
+        milDec.innerText = 0;
+        milUni.innerText = 0;
 
-   
+        chronometer.resetClick();
+    }
+
 });
 
