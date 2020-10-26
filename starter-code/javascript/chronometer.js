@@ -1,6 +1,7 @@
 class Chronometer {
     constructor() {
         this.currentMillis = 0;
+        this.currentSeconds = 0;
         this.intervalId = 0;
     }
 
@@ -13,11 +14,11 @@ class Chronometer {
     }
 
     setMinutes() {
-        return Math.floor((this.currentMillis / 60));
+        return Math.floor((this.currentSeconds / 60));
     }
 
     setSeconds() {
-        return Math.floor((this.currentMillis % 60));
+        return Math.floor((this.currentSeconds % 60));
     }
 
     twoDigitsNumber(number) {
@@ -32,7 +33,7 @@ class Chronometer {
 
     setMilliseconds() {
         let n = Math.floor(this.currentMillis / 100);
-        console.log(n);
+        this.currentSeconds = n;
         return n;
     }
 
