@@ -10,7 +10,7 @@ class Chronometer {
             this.currentMillis++;
             this.setTime();
             printTime(this.minutes, this.seconds, this.millis);
-        }, 1);
+        }, 10);
     }
 
     setMinutes() {
@@ -18,13 +18,12 @@ class Chronometer {
     }
 
     setSeconds() {
-        this.currentSeconds = (this.currentMillis / 250); // per què 250?
+        this.currentSeconds = Math.floor(this.currentMillis / 100);
         return Math.floor((this.currentSeconds % 60));
     }
 
     setMilliseconds() {
-        let x = (Math.floor((this.currentMillis / 10)) % 100);
-        return Math.floor(x);
+        return Math.floor(this.currentMillis);
     }
 
     twoDigitsNumber(number) {
