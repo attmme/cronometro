@@ -10,7 +10,7 @@ class Chronometer {
             this.currentMillis++;
             this.setTime();
             printTime(this.minutes, this.seconds, this.millis);
-        }, 1)
+        }, 1);
     }
 
     setMinutes() {
@@ -21,6 +21,12 @@ class Chronometer {
         return Math.floor((this.currentSeconds % 60));
     }
 
+    setMilliseconds() {
+        this.currentSeconds = (this.currentMillis / 1000);
+        //console.log("seconds: ", this.currentSeconds );
+        return this.currentMillis;
+    }
+
     twoDigitsNumber(number) {
         return '0'.concat(number.toString()).slice(-2);
     }
@@ -29,12 +35,6 @@ class Chronometer {
         this.minutes = this.twoDigitsNumber(this.setMinutes());
         this.seconds = this.twoDigitsNumber(this.setSeconds());
         this.millis = this.twoDigitsNumber(this.setMilliseconds());
-    }
-
-    setMilliseconds() {
-        let n = Math.floor(this.currentMillis / 100);
-        this.currentSeconds = n;
-        return n;
     }
 
     stopClick() {
