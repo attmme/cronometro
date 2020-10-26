@@ -18,13 +18,13 @@ class Chronometer {
     }
 
     setSeconds() {
+        this.currentSeconds = (this.currentMillis / 250); // per què 250?
         return Math.floor((this.currentSeconds % 60));
     }
 
     setMilliseconds() {
-        this.currentSeconds = (this.currentMillis / 1000);
-        //console.log("seconds: ", this.currentSeconds );
-        return this.currentMillis;
+        let x = (Math.floor((this.currentMillis / 10)) % 100);
+        return Math.floor(x);
     }
 
     twoDigitsNumber(number) {

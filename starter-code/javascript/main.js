@@ -14,6 +14,7 @@ function printTime(minutes, seconds, millis) {
         this.printMinutes(minutes);
     }
     this.printSeconds(seconds);
+    this.printMilliseconds(millis);
 }
 
 function printMinutes(minutes) {
@@ -95,7 +96,7 @@ btnLeft.addEventListener('click', function (e) {
 // Reset/Split Button
 btnRight.addEventListener('click', function () {
 
-    chronometer.setMilliseconds();
+    //chronometer.setMilliseconds();
 
     if (btnRight.innerText == 'RESET') {
         minDec.innerText = 0;
