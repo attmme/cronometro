@@ -7,7 +7,6 @@ Nuestro cronómetro tendra una pantalla LCD, donde se mostrarán minutos y segun
 
 Por último, añadiremos una función SPLIT.
 
-![](https://imgur.com/ZaTnDnz.gif)
 
 ### Requisitos
 
