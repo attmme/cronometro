@@ -27,8 +27,9 @@ function printSeconds(seconds) {
 
 }
 
-function printMilliseconds() {
-
+function printMilliseconds(milis) {
+    milDec.innerHTML = milis[0];
+    milUni.innerHTML = milis[1];
 }
 
 function printSplit() {
@@ -93,6 +94,8 @@ btnLeft.addEventListener('click', function (e) {
 
 // Reset/Split Button
 btnRight.addEventListener('click', function () {
+
+    chronometer.setMilliseconds();
 
     if (btnRight.innerText == 'RESET') {
         minDec.innerText = 0;

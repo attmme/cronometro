@@ -9,7 +9,7 @@
         this.currentTime++;
         this.setTime();
        // console.log(this.minutes+':'+this.seconds);
-       printTime(this.minutes,this.seconds);
+       printTime(this.minutes,this.seconds, this.millis);
     },1000)
 /*     setInterval(()=>{
         this.currentTime++;
@@ -31,10 +31,11 @@
  setTime() {
      this.minutes = this.twoDigitsNumber(this.setMinutes());
      this.seconds = this.twoDigitsNumber(this.setSeconds());
+     this.millis = this.twoDigitsNumber(this.setMilliseconds());
  }
 
  setMilliseconds() {
-
+    console.log("asd");
  }
 
  stopClick() {
