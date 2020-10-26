@@ -2,7 +2,6 @@
     constructor() {
         this.currentTime=0;
         this.intervalId=0;
-
 }
 
  startClick() {
@@ -51,6 +50,6 @@
  }
 }
 
-/* let crono = new Chronometer;
-crono.startClick(); */
+let crono = new Chronometer;
+//crono.startClick();
 

@@ -35,9 +35,9 @@ function printSplit() {
 
 }
 
-function chronometer(){
+/* function chronometer(){
     
-}
+} */
 
 function clearSplits() {
 
