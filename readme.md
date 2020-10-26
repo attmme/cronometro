@@ -1,3 +1,10 @@
+
+
+| Nombre  | Apellido    |
+| ------: | -----------: |
+| Víctor   |  Gómez |
+| Oscar   |  Gómez |
+
 # JS | Chronometer
 
 ## Introducción
