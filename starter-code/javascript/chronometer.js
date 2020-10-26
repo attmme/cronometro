@@ -1,54 +1,52 @@
- class Chronometer {
+class Chronometer {
     constructor() {
-        this.currentTime=0;
-        this.intervalId=0;
-}
+        this.currentMillis = 0;
+        this.intervalId = 0;
+    }
 
- startClick() {
-    this.intervalId = setInterval(()=>{
-        this.currentTime++;
-        this.setTime();
-       // console.log(this.minutes+':'+this.seconds);
-       printTime(this.minutes,this.seconds, this.millis);
-    },1000)
-/*     setInterval(()=>{
-        this.currentTime++;
-    },1000).bind(this); */
- }
+    startClick() {
+        this.intervalId = setInterval(() => {
+            this.currentMillis++;
+            this.setTime();
+            printTime(this.minutes, this.seconds, this.millis);
+        }, 1)
+    }
 
- setMinutes() {
-     return Math.floor(this.currentTime/60);
- }
+    setMinutes() {
+        return Math.floor((this.currentMillis / 60));
+    }
 
- setSeconds() {
-     return Math.floor(this.currentTime%60);
- }
+    setSeconds() {
+        return Math.floor((this.currentMillis % 60));
+    }
 
- twoDigitsNumber(number) {
-     return '0'.concat(number.toString()).slice(-2);
- }
+    twoDigitsNumber(number) {
+        return '0'.concat(number.toString()).slice(-2);
+    }
 
- setTime() {
-     this.minutes = this.twoDigitsNumber(this.setMinutes());
-     this.seconds = this.twoDigitsNumber(this.setSeconds());
-     this.millis = this.twoDigitsNumber(this.setMilliseconds());
- }
+    setTime() {
+        this.minutes = this.twoDigitsNumber(this.setMinutes());
+        this.seconds = this.twoDigitsNumber(this.setSeconds());
+        this.millis = this.twoDigitsNumber(this.setMilliseconds());
+    }
 
- setMilliseconds() {
-    console.log("asd");
- }
+    setMilliseconds() {
+        let n = Math.floor(this.currentMillis / 100);
+        console.log(n);
+        return n;
+    }
 
- stopClick() {
-     clearInterval(this.intervalId);
- }
+    stopClick() {
+        clearInterval(this.intervalId);
+    }
 
- resetClick() {
-     this.currentTime=0;
- }
+    resetClick() {
+        this.currentMillis = 0;
+    }
 
- splitClick() {
+    splitClick() {
 
- }
+    }
 }
 
 // let crono = new Chronometer;

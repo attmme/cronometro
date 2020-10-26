@@ -9,7 +9,7 @@ let milDec = document.getElementById('milDec');
 let milUni = document.getElementById('milUni');
 
 
-function printTime(minutes, seconds) {
+function printTime(minutes, seconds, millis) {
     if (minutes > 0) {
         this.printMinutes(minutes);
     }
