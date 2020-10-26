@@ -35,6 +35,10 @@ function printSplit() {
 
 }
 
+function chronometer(){
+    
+}
+
 function clearSplits() {
 
 }
